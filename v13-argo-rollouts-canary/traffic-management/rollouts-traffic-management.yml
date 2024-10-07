@@ -10,9 +10,9 @@ spec:
       # abortScaleDownDelaySeconds: 20
       canaryService: canary-service
       stableService: stable-service
-      # trafficRouting:
-      #   nginx:
-      #     stableIngress: rollouts-traffic-management
+      trafficRouting:
+        nginx:
+          stableIngress: rollouts-traffic-management
       steps:
       - setWeight: 20 # Using Setweight Only
       - pause: {}
