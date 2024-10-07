@@ -14,13 +14,13 @@ spec:
         nginx:
           stableIngress: rollouts-traffic-management
       steps:
-      - setWeight: 20 # Using Setweight Only
-      - pause: {}
-      # ....................
-      # - setCanaryScale: # Using SetCanaryScale with SetWeight
-      #    weight: 40 
-      # - setWeight: 40
+      # - setWeight: 20 # Using Setweight Only
       # - pause: {}
+      # ....................
+      - setCanaryScale: # Using SetCanaryScale with SetWeight
+         weight: 60 
+      - setWeight: 40
+      - pause: {}
   selector:
     matchLabels:
       app: rollouts-traffic-management
