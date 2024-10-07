@@ -6,7 +6,7 @@ spec:
   replicas: 5
   strategy:
     canary:
-      # dynamicStableScale: true
+      dynamicStableScale: true
       # abortScaleDownDelaySeconds: 20
       canaryService: canary-service
       stableService: stable-service
