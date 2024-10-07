@@ -6,7 +6,7 @@ spec:
   replicas: 5
   strategy:
     canary:
-      # dynamicStableScale: true
+      dynamicStableScale: true
       # abortScaleDownDelaySeconds: 20
       canaryService: canary-service
       stableService: stable-service
@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: rollouts-traffic-management
-        image: argoproj/rollouts-demo:green
+        image: argoproj/rollouts-demo:blue
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
