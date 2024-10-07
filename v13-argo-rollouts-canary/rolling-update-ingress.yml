@@ -14,4 +14,4 @@ spec:
           service:
             name: rolling-update
             port:
-              number: 5000
+              number: 8080
